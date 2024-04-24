@@ -46,15 +46,7 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
               <h3 class="card-title">Data Mahasiswa</h3>
 
               <div class="card-tools">
-                <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                  <div class="input-group-append">
-                    <button type="submit" class="btn btn-default">
-                      <i class="fas fa-search"></i>
-                    </button>
-                  </div>
-                </div>
+              <a href="tambahmahasiswa.php" class="btn btn-primary">Tambah</a>
               </div>
             </div>
             <!-- /.card-header -->
@@ -84,9 +76,9 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
                       <td><?php echo $d['nama_prodi'] ?></td>
                       <td><?php echo $d['no_hp'] ?></td>
                       <td><?php echo $d['alamat'] ?></td>
-                      <td><?php echo $d['foto'] ?></td>
-                      <td><a href="" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Hapus</a>
+                      <td><img src="images/<?= $d['foto'] ?>" width="50px"></td>
+                      <td><a href="editmahasiswa.php?nim=<?= $d['nim'] ?>" class="btn btn-warning">Edit</a>
+                        <a href="hapusmahasiswa.php?nim=<?= $d['nim'] ?>" class="btn btn-danger">Hapus</a>
                       </td>
                     </tr>
                   <?php

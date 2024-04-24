@@ -46,15 +46,7 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
               <h3 class="card-title">Data Program Studi</h3>
 
               <div class="card-tools">
-                <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                  <div class="input-group-append">
-                    <button type="submit" class="btn btn-default">
-                      <i class="fas fa-search"></i>
-                    </button>
-                  </div>
-                </div>
+                <a href="tambahprodi.php" class="btn btn-primary">Tambah</a>
               </div>
             </div>
             <!-- /.card-header -->
@@ -75,8 +67,8 @@ while ($baris = mysqli_fetch_assoc($hasil)) {
                     <tr>
                       <td><?php echo $i++ ?></td>
                       <td><?php echo $d['nama_prodi'] ?></td>
-                      <td><a href="" class="btn btn-warning">Edit</a>
-                        <a href="" class="btn btn-danger">Hapus</a>
+                      <td><a href="editprodi.php?id_prodi=<?= $d['id_prodi'] ?>" class="btn btn-warning">Edit</a>
+                        <a href="hapusprodi.php?id_prodi=<?= $d['id_prodi'] ?>" class="btn btn-danger">Hapus</a>
                       </td>
                     </tr>
                   <?php
