@@ -1,5 +1,7 @@
 <?php 
+session_start();
 require 'koneksi.php';
+ceklogin();
 
 $nim = $_POST['nim'];
 $nama = $_POST['nama'];

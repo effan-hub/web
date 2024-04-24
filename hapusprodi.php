@@ -1,5 +1,7 @@
 <?php 
+session_start();
 require 'koneksi.php';
+ceklogin();
 
 $id = $_GET['id_prodi'];
 $query = "DELETE FROM prodi WHERE id_prodi='$id'";
